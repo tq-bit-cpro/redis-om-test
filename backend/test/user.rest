@@ -1,0 +1,22 @@
+@base-url = http://localhost:8080
+
+# Working request for the template flows, see Repos https://github.com/cpro-iot/cproiot-erp-connector-template
+# Use with VS-Code extention 'rest-client'
+
+POST {{base-url}}/ping
+
+###
+
+POST {{base-url}}/users
+Content-type: application/json
+
+< ./http_body.json
+
+
+###
+
+GET {{base-url}}/users
+
+###
+
+DELETE {{base-url}}/users/all

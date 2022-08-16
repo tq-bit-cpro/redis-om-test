@@ -1,0 +1,14 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: .dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./backend:/backend
+  redis:
+    image: redis/redis-stack
+    ports:
+      - 6379:6379
+      - 8001:8001
